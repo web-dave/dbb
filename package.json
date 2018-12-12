@@ -8,7 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "rest": "bookmonkey-api"
+    "rest": "bookmonkey-api",
+    "prehase": "echo PREHASE",
+    "hase": "echo HASE",
+    "posthase": "echo POSTHASE"
   },
   "private": true,
   "dependencies": {
