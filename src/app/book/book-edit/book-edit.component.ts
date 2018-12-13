@@ -17,6 +17,7 @@ export class BookEditComponent implements OnInit {
   ) {}
   save() {
     console.table(this.book);
+
     this.service.saveBook(this.book).subscribe(b => {
       this.router.navigate([".."], { relativeTo: this.route });
     });
