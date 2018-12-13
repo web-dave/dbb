@@ -5,6 +5,7 @@ import { BookListComponent } from "./book-list/book-list.component";
 import { BookDetailsComponent } from "./book-details/book-details.component";
 import { ConfirmCandeactivateGuard } from "./shared/confirm-candeactivate.guard";
 import { BookEditComponent } from "./book-edit/book-edit.component";
+import { BookNewComponent } from "./book-new/book-new.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
       {
         component: BookListComponent,
         path: ""
+      },
+      {
+        component: BookNewComponent,
+        path: "new"
       },
       {
         component: BookDetailsComponent,

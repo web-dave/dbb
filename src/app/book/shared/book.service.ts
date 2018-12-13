@@ -23,4 +23,8 @@ export class BookService {
   saveBook(book): Observable<IBook> {
     return this.http.put<IBook>(`${this.url}/${book.isbn}`, book);
   }
+
+  createBook(book: IBook) {
+    return this.http.post<IBook>(this.url, book);
+  }
 }

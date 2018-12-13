@@ -1,0 +1,32 @@
+<p>book-new works!</p>
+<form [formGroup]="form" (ngSubmit)="save()">
+  <input type="text" formControlName="title" />
+  <span
+    [hidden]="
+      !form.get('title').hasError('required') || form.get('title').pristine
+    "
+  >
+    Ein Titel wäre schon wünschenswert.
+  </span>
+  <br />
+  <input type="text" formControlName="author" />
+  <span
+    [hidden]="
+      !form.get('author').hasError('required') || form.get('author').pristine
+    "
+  >
+    Wer hat's erfunden?
+  </span>
+  <br />
+  <input type="text" formControlName="subtitle" />
+  <input type="text" formControlName="abstract" />
+  <input type="text" formControlName="numPages" />
+  <div formGroupName="publisher">
+    <input type="text" formControlName="name" />
+    <input type="text" formControlName="url" />
+  </div>
+
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>
+
+<pre>{{ form.value | json }}</pre>
