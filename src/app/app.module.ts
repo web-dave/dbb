@@ -6,18 +6,14 @@ import { AppComponent } from "./app.component";
 import { InfoBoxComponent } from "./info-box/info-box.component";
 import { MouseCursorComponent } from "./mouse-cursor/mouse-cursor.component";
 import { TitleBoxComponent } from "./title-box/title-box.component";
-import { BookListComponent } from "./book-list/book-list.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { BookDetailsComponent } from "./book-details/book-details.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoBoxComponent,
     MouseCursorComponent,
-    TitleBoxComponent,
-    BookListComponent,
-    BookDetailsComponent
+    TitleBoxComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

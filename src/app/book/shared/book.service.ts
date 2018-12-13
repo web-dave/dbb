@@ -15,7 +15,12 @@ export class BookService {
   getBooks(): Observable<IBook[]> {
     return this.http.get<IBook[]>(this.url);
   }
+
   getBook(isbn): Observable<IBook> {
     return this.http.get<IBook>(`${this.url}/${isbn}`);
+  }
+
+  saveBook(book): Observable<IBook> {
+    return this.http.put<IBook>(`${this.url}/${book.isbn}`, book);
   }
 }

@@ -1,0 +1,37 @@
+<p>book-edit works!</p>
+<form *ngIf="book" #form="ngForm" (ngSubmit)="save()">
+  <input
+    type="text"
+    [(ngModel)]="book.title"
+    name="title"
+    #title="ngModel"
+    required
+  />
+  <span [hidden]="!title.errors?.required || title.pristine">
+    Ein Titel wäre schon wünschenswert.
+  </span>
+  <br />
+  <input
+    type="text"
+    [(ngModel)]="book.abstract"
+    name="abstract"
+    #abstract="ngModel"
+    required
+  />
+  <span [hidden]="!abstract.errors?.required || abstract.pristine">
+    Worum geht's?
+  </span>
+  <br />
+  <input
+    type="text"
+    [(ngModel)]="book.author"
+    name="author"
+    #author="ngModel"
+    required
+  />
+  <span [hidden]="!author.errors?.required || author.pristine">
+    Wer hat's erfunden?
+  </span>
+
+  <button type="submit" [disabled]="!form.valid">save</button>
+</form>
