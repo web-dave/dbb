@@ -1,10 +1,14 @@
 <h3>Bookstore</h3>
 <div>
   <ul>
-    <li *ngFor="let book of books">{{ book.title }}</li>
+    <li *ngFor="let book of books">
+      {{ book.title }} <a [routerLink]="[book.isbn]">...</a>
+    </li>
   </ul>
 </div>
 
-<pre>
-  {{ books[0] | json }}
-</pre>
+<!--
+  <pre *ngIf="books">
+    {{ books[0] | json }}
+  </pre>
+-->

@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "dbb";
-
+  showBooks = true;
   recive(e: string) {
     console.log(e);
   }
