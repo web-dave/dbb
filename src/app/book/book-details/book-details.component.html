@@ -1,3 +1,5 @@
 <p>book-details works!</p>
-<pre>{{ book | json }}</pre>
+<!-- <pre>{{ book | json }}</pre> -->
+<label *ngIf="book">{{ book | shout }}</label>
+<hr />
 <a [routerLink]="['edit']">EDIT</a> | <a [routerLink]="['..']">back</a>

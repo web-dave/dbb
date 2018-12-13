@@ -1,8 +1,8 @@
 <h3>Bookstore</h3>
 <div>
   <ul>
-    <li *ngFor="let book of books">
-      {{ book.title }} <a [routerLink]="[book.isbn]">...</a>
+    <li *ngFor="let book of ($books | async)">
+      {{ book.title | pipe }} <a [routerLink]="[book.isbn]">...</a>
     </li>
   </ul>
 </div>

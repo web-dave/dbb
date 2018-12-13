@@ -8,6 +8,8 @@ import { BookListComponent } from "./book-list/book-list.component";
 import { BookDetailsComponent } from "./book-details/book-details.component";
 import { BookEditComponent } from "./book-edit/book-edit.component";
 import { BookNewComponent } from "./book-new/book-new.component";
+import { PipePipe } from './shared/pipe.pipe';
+import { ShoutPipe } from './shared/shout.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BookNewComponent } from "./book-new/book-new.component";
     BookListComponent,
     BookDetailsComponent,
     BookEditComponent,
-    BookNewComponent
+    BookNewComponent,
+    PipePipe,
+    ShoutPipe
   ],
   imports: [CommonModule, BookRoutingModule, FormsModule, ReactiveFormsModule]
 })
